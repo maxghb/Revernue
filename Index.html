@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income and Expenses Tracker</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Income and Expenses Tracker</h1>
+        <div class="form-row mt-4">
+            <div class="col">
+                <input type="text" id="description" class="form-control" placeholder="Description">
+            </div>
+            <div class="col">
+                <input type="number" id="amount" class="form-control" placeholder="Amount (THB)">
+            </div>
+            <div class="col">
+                <select id="type" class="form-control">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+            </div>
+            <div class="col">
+                <input type="date" id="date" class="form-control">
+            </div>
+            <div class="col">
+                <button id="add-btn" class="btn btn-success w-100">Add</button>
+            </div>
+        </div>
+        <div class="balance mt-4">
+            <h2 class="text-center">Balance: ฿<span id="balance">0.00</span></h2>
+            <h3 class="text-center">Total Income: ฿<span id="total-income">0.00</span></h3>
+            <h3 class="text-center">Total Expenses: ฿<span id="total-expenses">0.00</span></h3>
+        </div>
+        <div class="transactions mt-4">
+            <h2 class="text-center">Transactions</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount (THB)</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="transaction-list">
+                    <!-- Transactions will be appended here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
