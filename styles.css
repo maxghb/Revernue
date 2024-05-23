@@ -8,14 +8,27 @@ body {
 
 .container {
     background-color: #fff;
-    padding: 20px;
+    padding: 30px; /* Increased padding for more space inside the container */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    max-width: 1200px; /* Increased max-width for a larger container */
+    margin: 40px auto; /* Center align the container with top margin */
 }
 
 .transactions table {
     margin-top: 20px;
+    width: 100%; /* Ensure table takes full width */
+    border-collapse: collapse; /* Remove spaces between table cells */
+}
+
+.transactions table th, 
+.transactions table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Add border for rows */
+}
+
+.transactions table th {
+    background-color: #f2f2f2; /* Light grey background for headers */
 }
 
 .transactions button {
@@ -28,4 +41,19 @@ body {
 .balance .summary-text {
     font-size: 1.25rem; /* Adjusted font size */
     margin-bottom: 0;
+}
+
+.balance {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.w-100 {
+    width: 100%;
 }
